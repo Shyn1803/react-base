@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+
+.loadingContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $bg-loading-color;
+  backdrop-filter: $backdrop-blur;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

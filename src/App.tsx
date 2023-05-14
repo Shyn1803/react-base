@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import LoginPage from "./pages/loginPage";
+import BlankLayout from "./layouts/blankLayout/blankLayout";
+import LoadingComponent from "./components/loadingComponent";
 
 function App() {
+  const loadingStore = useSelector((state: RootState) => state.loading);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          {/* <Route path="/login" element={<LoginPage />} /> */}
+          <Route path="/*" element={<BlankLayout />} />
+        </Routes>
+        {loadingStore?.status ? <LoadingComponent /> : null}
+      </div>
+    </Router>
   );
 }
 

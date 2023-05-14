@@ -1,0 +1,87 @@
+@import '../../styles/variables.scss';
+
+.articleDetailPageContainer {
+  padding-top: 20px;
+
+  :global {
+    .title {
+      font-size: 36px;
+      line-height: 44px;
+      margin: 0px;
+    }
+
+    .author {
+      font-style: italic;
+    }
+
+    .info {
+      display: flex;
+      justify-content: flex-start;
+
+      .separate {
+        height: 24px;
+        width: 1px;
+        background-color: #919191;
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+
+      .tags {
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+        line-height: 18px;
+
+        .tag-wrapper {
+          border-radius: 5px;
+          padding: 3px 4px;
+          background-color: #dddddd;
+        }
+      }
+    }
+
+    .body {
+      margin-top: 24px;
+    }
+
+    .separate-section {
+      height: 24px;
+      width: 1px;
+      background-color: #919191;
+    }
+
+    .comments-wrapper {
+      width: min(100%, 900px);
+
+      .comment-title {
+        font-size: 26px;
+        line-height: 32px;
+        font-weight: 500;
+        margin: 0px;
+      }
+
+      .ant-list {
+        .ant-list-item-action {
+          .edit-comment-btn {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .text-area-add-comment {
+        margin-top: 20px;
+        max-width: 100%;
+        mIN-width: 100%;
+      }
+
+      .btn-add-comment-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        .btn-add-comment {
+          padding: 5px 8px;
+        }
+      }
+    }
+  }
+}

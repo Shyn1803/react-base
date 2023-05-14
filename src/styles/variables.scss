@@ -1,0 +1,77 @@
+// @import '~antd/es/style/themes/default.less';
+
+$primary-color: #D2C8AA;
+$secondary-color: #333129;
+$saddle-brown-color: #5C4500;
+$pale-golden-color: #EBDAA9;
+$gray-brown-color: #99927C;
+
+$white-color: #FFFFFF;
+$black-color: #000000;
+
+$required-color: #c41e1e;
+
+$neutral-1: #FAFAFA;
+$neutral-2: #F9F9F9;
+$neutral-3: #F0F0F0;
+$neutral-4: #E5E5E5;
+$neutral-8: #7A7A7A;
+
+$font-regular: normal;
+$font-semibold: 600;
+$font-bold: bold;
+
+$font-size-largest-title: 60px;
+$line-height-largest-title: 82px;
+
+$font-size-large-title: 40px;
+$line-height-large-title: 60px;
+
+$font-size-title: 36px;
+$line-height-title: 54px;
+
+$font-size-head-title: 24px;
+$line-height-head-title: 36px;
+
+$font-size-lg: 18px;
+$line-height-lg: 28px;
+
+$font-size-md: 16px;
+$line-height-md: 24px;
+
+$font-size-sm: 14px;
+$line-height-sm: 20px;
+
+$font-size-xs: 12px;
+$line-height-xs: 16px;
+
+$font-size-base: $font-size-sm;
+$line-height-base: $line-height-sm;
+
+$font-base: $font-size-base/$line-height-base Open sans, serif;
+
+$font-largest-title: $font-size-largest-title/$line-height-largest-title Open sans, serif;
+$font-large-title: $font-size-large-title/$line-height-large-title Open sans, serif;
+$font-title: $font-size-title/$line-height-title Open sans, serif;
+$font-head-title: $font-size-head-title/$line-height-head-title Open sans, serif;
+$font-lg: $font-size-lg/$line-height-lg Open sans, serif;
+$font-md: $font-size-md/$line-height-md Open sans, serif;
+$font-sm: $font-size-sm/$line-height-sm Open sans, serif;
+$font-xs: $font-size-xs/$line-height-xs Open sans, serif;
+
+// Shadow
+$box-shadow: 0px 4px 15px #eeeeee;
+$box-shadow-hover: 0px 4px 20px #dfdfdf;
+
+// Transition
+$linear-025: 0.25s linear;
+
+$bg-loading-color: rgba(32, 32, 32, 0.5);
+$backdrop-blur: blur(4px);
+
+// Custom scroll bar
+$scrollbar-track-background: transparent;
+$scrollbar-thumb-color: #dcdcdc;
+$scrollbar-thumb-hover-color: #acacac;
+$scrollbar-thumb-border-radius: 3px;
+$scroll-bar-width: 5px;

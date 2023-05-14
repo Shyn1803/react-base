@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.userPageContainer {
+  :global {
+    .ant-table-wrapper {
+      .ant-table-content {
+        .user-wrapper {
+          display: flex;
+          align-items: center;
+
+          .image-wrapper {
+            width: 32px;
+            height: 32px;
+            margin-right: 8px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        .operation-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .edit-icon-wrapper, .detail-icon-wrapper {
+            cursor: pointer;
+            display: flex;
+          }
+
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+}

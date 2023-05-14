@@ -1,0 +1,17 @@
+@import './variables.scss';
+@import './global.scss';
+
+html,
+body {
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+  color: $black-color;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html *,
+body * {
+  font-family: sans-serif;
+}
