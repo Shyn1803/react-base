@@ -1,6 +1,6 @@
 @import '../../styles/variables.scss';
 
-.loginPageContainer {
+.signUpPageContainer {
   background-color: #093545;
   width: 100vw;
   height: 100vh;
@@ -10,7 +10,7 @@
   color: white;
 
   :global {
-    .login-card {
+    .sign-up-card {
       width: 400px;
       padding: 35px 60px 50px;
       background-color: rgba(222, 222, 222, 0.03);
@@ -21,7 +21,7 @@
       justify-content: center;
       text-align: center;
 
-      .login-text {
+      .sign-up-text {
         font-size: 54px;
         line-height: 70px;
         font-weight: bold;
@@ -31,7 +31,7 @@
       .sign-up-redirect-text-wrapper {
         margin-top: 20px;
 
-        .sign-up-text {
+        .sign-in-text {
           color: #20DF7F;
           cursor: pointer;
           text-decoration: underline;
@@ -42,7 +42,7 @@
         }
       }
 
-      #login-form {
+      #sign-up-form {
         .ant-form-item {
           margin-bottom: 35px;
 
@@ -100,4 +100,9 @@
       }
     }
   }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

@@ -87,7 +87,7 @@ export default function ArticleNewPage() {
             <TextArea />
           </Form.Item>
 
-          <Form.Item className="form-item" label="Tags" name="tags">
+          <Form.Item className="form-item" label="Tags" name="tagList">
             <Select
               mode="tags"
               style={{ width: "100%" }}

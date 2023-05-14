@@ -50,16 +50,13 @@ export default function UserProfilePage() {
 
   const getUserProfile = async (controller?: AbortController) => {
     try {
-      const options: any = {
-        signal: true,
-      };
+      const options: any = {};
 
       if (controller) {
         options.signal = controller?.signal;
       }
 
       await axiosPrivate.get(USER_PROFILE_URL, options).then((res) => {
-        console.log("res: ", res);
         if ([200, 201].includes(res?.status)) {
           dispatch(updateUser(res?.data?.user || {}));
           form.setFieldsValue(res?.data?.user);
@@ -78,8 +75,6 @@ export default function UserProfilePage() {
   };
 
   const onFinish = async (values: FormValueProps) => {
-    console.log("onFinish: ", values);
-    console.log("imageBase64: ", imageBase64);
     const userData = {
       ...values,
       image: imageBase64 === AVATAR_DEFAULT_URL ? "" : imageBase64,
@@ -92,6 +87,7 @@ export default function UserProfilePage() {
             type: "success",
             content: UPDATE_SUCCESS(),
           });
+
           getUserProfile();
         }
       });
@@ -104,7 +100,6 @@ export default function UserProfilePage() {
   };
 
   const onChange: UploadProps["onChange"] = ({ fileList: newFileList }) => {
-    console.log(newFileList);
     setFileList([newFileList?.at(-1)]);
     var file: any = newFileList?.at(-1);
 

@@ -13,6 +13,7 @@ import ArticlePage from "../../pages/articlePage";
 import ArticleDetailPage from "../../pages/articleDetailPage";
 import ArticleEditPage from "../../pages/articleEditPage";
 import ArticleNewPage from "../../pages/articleNewPage";
+import SignUpPage from "../../pages/signUpPage";
 
 import styles from "./styles.module.scss";
 
@@ -28,6 +29,7 @@ const BlankLayout = () => {
       ) : (
         <Routes>
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/signUp" element={<SignUpPage />} />
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       )}
@@ -47,7 +49,7 @@ function Content() {
         <Route path="/article/edit/:slug" element={<ArticleEditPage />} />
         <Route path="/article/new" element={<ArticleNewPage />} />
         <Route path="/profile" element={<UserProfilePage />} />
-        
+
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
     </div>

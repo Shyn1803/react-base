@@ -7,10 +7,9 @@ const MESSAGE = {
   CREATE_FAILED: () => `Registration processing failed. Please check again.`,
   DELETE_CONFIRM: () => `Are you sure you want to delete?`,
   DELETE_SUCCESS: () => `Delete processing was successful`,
-  DELETE_FAILED: () =>
-    `Delete processing failed. Please check again.`,
-    COMMENT_CREATE_SUCCESS: () =>
-    `The comment has been successfully created.`,
+  DELETE_FAILED: () => `Delete processing failed. Please check again.`,
+  COMMENT_CREATE_SUCCESS: () => `The comment has been successfully created.`,
+  REGISTER_USER_SUCCESS: () => `The user has been successfully created.`,
 };
 
 export default MESSAGE;

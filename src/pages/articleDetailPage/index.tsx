@@ -43,9 +43,7 @@ export default function ArticleDetailPage() {
 
   const getArticle = async (controller?: AbortController) => {
     try {
-      const options: any = {
-        signal: true,
-      };
+      const options: any = {};
 
       if (controller) {
         options.signal = controller?.signal;
@@ -82,8 +80,8 @@ export default function ArticleDetailPage() {
               type: "success",
               content: DELETE_SUCCESS(),
             });
-            const controller = new AbortController();
-            getArticle(controller);
+
+            getArticle();
           }
         });
     } catch (err: any) {
@@ -157,7 +155,9 @@ export default function ArticleDetailPage() {
               ]}
             >
               <List.Item.Meta
-                avatar={<Avatar src={item?.author?.image || AVATAR_DEFAULT_URL} />}
+                avatar={
+                  <Avatar src={item?.author?.image || AVATAR_DEFAULT_URL} />
+                }
                 title={
                   <a href="https://ant.design">{item?.author?.username}</a>
                 }
