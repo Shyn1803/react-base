@@ -46,7 +46,7 @@ export default function ArticlePage() {
       dispatch(showLoading());
       await axiosPrivate
         .get(ARTICLES_URL, options)
-        .then((res) => {
+        .then((res: any) => {
           if (res?.status === 200) {
             setArticles(res?.data?.articles || []);
           }

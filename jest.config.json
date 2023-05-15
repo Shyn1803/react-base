@@ -1,4 +1,12 @@
 {
-  "bail": 1,
-  "verbose": true
+  "moduleNameMapper": {
+    "axios": "axios/dist/node/axios.cjs",
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+  },
+  "testEnvironment": "jsdom",
+  "testEnvironmentOptions": {
+    "html": "<html lang='zh-cmn-Hant'></html>",
+    "url": "https://jestjs.io/",
+    "userAgent": "Agent/007"
+  }
 }

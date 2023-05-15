@@ -8,14 +8,14 @@ const useAxiosPrivate = () => {
 
   useEffect(() => {
     const requestIntercept = axiosPrivate.interceptors.request.use(
-      (config) => {
+      (config: any) => {
         if (!config.headers["Authorization"]) {
           config.headers["Authorization"] = `Bearer ${userStore?.user?.token}`;
         }
 
         return config;
       },
-      (error) => Promise.reject(error)
+      (error: any) => Promise.reject(error)
     );
 
     return () => {

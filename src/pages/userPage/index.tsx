@@ -104,7 +104,7 @@ export default function UserPage() {
       dispatch(showLoading());
       await axiosPrivate
         .get(USER_URL, options)
-        .then((res) => {
+        .then((res: any) => {
           if (res?.data) {
             const formatData = res?.data?.map((item: any) => {
               item.key = `${item?.id}`;

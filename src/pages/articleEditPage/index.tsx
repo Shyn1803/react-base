@@ -5,10 +5,11 @@ import { useForm } from "antd/es/form/Form";
 import axios from "axios";
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import { useParams } from "react-router";
+import { useNavigate } from "react-router-dom";
+import TextArea from "antd/es/input/TextArea";
+import MESSAGE from "../../utils/message";
 
 import styles from "./styles.module.scss";
-import MESSAGE from "../../utils/message";
-import TextArea from "antd/es/input/TextArea";
 
 const ARTICLES_URL = "api/articles";
 
@@ -32,6 +33,7 @@ type FormValueProps = {
 
 export default function ArticleEditPage() {
   const axiosPrivate = useAxiosPrivate();
+  const navigate = useNavigate();
   const { slug } = useParams();
   const [messageApi, contextHolder] = message.useMessage();
   const [form] = useForm();
@@ -59,7 +61,7 @@ export default function ArticleEditPage() {
         options.signal = controller?.signal;
       }
 
-      await axiosPrivate.get(`${ARTICLES_URL}/${slug}`, options).then((res) => {
+      await axiosPrivate.get(`${ARTICLES_URL}/${slug}`, options).then((res: any) => {
         if (res?.status === 200) {
           form.setFieldsValue(
             { ...res?.data?.article } || {}
@@ -89,14 +91,14 @@ export default function ArticleEditPage() {
           tagList,
           title,
         })
-        .then((res) => {
+        .then((res: any) => {
           if ([200, 201].includes(res?.status)) {
             messageApi.open({
               type: "success",
               content: UPDATE_SUCCESS(),
             });
 
-            getArticle();
+            navigate('/article');
           }
         });
     } catch (err) {

@@ -27,5 +27,9 @@
     "src/pages/*",
     "src/pages/**/*",
   ],
-  "extends": "./tsconfig.paths.json"
+  "extends": "./tsconfig.paths.json",
+  "exclude": [
+    "node_modules",
+    "__tests__"
+  ]
 }

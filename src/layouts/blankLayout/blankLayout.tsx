@@ -14,6 +14,7 @@ import ArticleDetailPage from "../../pages/articleDetailPage";
 import ArticleEditPage from "../../pages/articleEditPage";
 import ArticleNewPage from "../../pages/articleNewPage";
 import SignUpPage from "../../pages/signUpPage";
+import ErrorBoundary from "../../components/errorBoundary";
 
 import styles from "./styles.module.scss";
 
@@ -28,7 +29,14 @@ const BlankLayout = () => {
         </AdminLayout>
       ) : (
         <Routes>
-          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/login"
+            element={
+              <ErrorBoundary>
+                <LoginPage />
+              </ErrorBoundary>
+            }
+          />
           <Route path="/signUp" element={<SignUpPage />} />
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>

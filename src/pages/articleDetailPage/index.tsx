@@ -49,7 +49,7 @@ export default function ArticleDetailPage() {
         options.signal = controller?.signal;
       }
 
-      await axiosPrivate.get(`${ARTICLES_URL}/${slug}`, options).then((res) => {
+      await axiosPrivate.get(`${ARTICLES_URL}/${slug}`, options).then((res: any) => {
         if (res?.status === 200) {
           setArticle(res?.data?.article || {});
         }

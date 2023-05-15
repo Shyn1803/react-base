@@ -56,7 +56,7 @@ export default function UserProfilePage() {
         options.signal = controller?.signal;
       }
 
-      await axiosPrivate.get(USER_PROFILE_URL, options).then((res) => {
+      await axiosPrivate.get(USER_PROFILE_URL, options).then((res: any) => {
         if ([200, 201].includes(res?.status)) {
           dispatch(updateUser(res?.data?.user || {}));
           form.setFieldsValue(res?.data?.user);
@@ -81,7 +81,7 @@ export default function UserProfilePage() {
     };
 
     try {
-      await axiosPrivate.put(USER_PROFILE_URL, userData).then((res) => {
+      await axiosPrivate.put(USER_PROFILE_URL, userData).then((res: any) => {
         if ([200, 201].includes(res?.status)) {
           messageApi.open({
             type: "success",

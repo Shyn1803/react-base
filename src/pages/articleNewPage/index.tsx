@@ -42,7 +42,7 @@ export default function ArticleNewPage() {
 
   const onFinish = async (values: FormValueProps) => {
     try {
-      await axiosPrivate.post(ARTICLES_URL, values).then((res) => {
+      await axiosPrivate.post(ARTICLES_URL, values).then((res: any) => {
         if ([200, 201].includes(res?.status)) {
           messageApi.open({
             type: "success",
